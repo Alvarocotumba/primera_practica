@@ -1,0 +1,373 @@
+/* 1. AJUSTES GENERALES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea {
+  font-family: var(--font-body);
+}
+
+/* 2. VARIABLES */
+:root {
+  --color-blueprint: #16324f;
+  --color-blueprint-line: #3e6e96;
+  --color-paper: #f4f6f8;
+  --color-white: #ffffff;
+  --color-ink: #1b2733;
+  --color-muted: #5c7a93;
+  --color-accent: #e8623c;
+
+  --font-heading: "IBM Plex Sans", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+
+  --container-width: 1140px;
+  --radius-sm: 4px;
+}
+
+/* 3. BASE */
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-paper);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-blueprint);
+}
+
+.section-intro {
+  color: var(--color-muted);
+  max-width: 38rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0 1rem 1rem 0;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+/* 4. HEADER Y NAVEGACIÓN */
+.site-header {
+  background-color: var(--color-paper);
+  border-bottom: 1px solid var(--color-blueprint-line);
+}
+
+.header-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-blueprint);
+}
+
+.logo-name {
+  color: var(--color-accent);
+}
+
+/* Contenedor Flexbox del proyecto: el menú de navegación */
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.nav-list a {
+  color: var(--color-blueprint);
+  font-weight: 500;
+}
+
+/* 5. HERO */
+.hero {
+  background: linear-gradient(to bottom, var(--color-blueprint), var(--color-ink));
+  color: var(--color-paper);
+  padding: 6rem 1.5rem;
+}
+
+.hero-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 2.5rem;
+  border: 1px solid var(--color-accent);
+}
+
+.hero-title {
+  max-width: 22rem;
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+}
+
+.hero-text {
+  max-width: 34rem;
+  margin-bottom: 2.5rem;
+  color: rgba(244, 246, 248, 0.85);
+  font-size: 1.05rem;
+}
+
+/* 6. SOBRE MÍ */
+.about {
+  padding: 5rem 1.5rem;
+}
+
+.about-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-frame {
+  height: 220px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  border: 2px solid var(--color-blueprint-line);
+  border-radius: var(--radius-sm);
+}
+
+.about-mark {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 6rem;
+  color: var(--color-blueprint-line);
+}
+
+.about-content p {
+  max-width: 38rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-ink);
+}
+
+.skills-list li {
+  display: inline-block;
+  margin: 0 0.75rem 0.75rem 0;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--color-blueprint-line);
+  border-radius: var(--radius-sm);
+  color: var(--color-blueprint);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+/* 7. PORTAFOLIO */
+.portfolio {
+  padding: 5rem 1.5rem;
+  background-color: var(--color-white);
+}
+
+.portfolio-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--color-paper);
+  border: 1px solid var(--color-blueprint-line);
+  border-top: 3px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.project-body {
+  padding: 1.5rem;
+}
+
+.project-body h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+}
+
+.project-body p {
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.tech-tags li {
+  display: inline-block;
+  margin: 0 0.5rem 0.5rem 0;
+  padding: 0.3rem 0.6rem;
+  background-color: var(--color-blueprint);
+  color: var(--color-paper);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+/* 8. CONTACTO */
+.contact {
+  padding: 5rem 1.5rem;
+  background-color: var(--color-blueprint);
+  color: var(--color-paper);
+}
+
+.contact-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.contact .section-intro {
+  color: rgba(244, 246, 248, 0.75);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--color-blueprint-line);
+  border-radius: var(--radius-sm);
+  background-color: rgba(244, 246, 248, 0.05);
+  color: var(--color-paper);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(244, 246, 248, 0.4);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: rgba(244, 246, 248, 0.1);
+}
+
+/* 9. FOOTER */
+.site-footer {
+  background-color: var(--color-ink);
+  color: var(--color-paper);
+  padding: 3rem 1.5rem;
+}
+
+.footer-inner {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer-name {
+  margin-bottom: 0.25rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.footer-block p {
+  color: rgba(244, 246, 248, 0.7);
+  font-size: 0.9rem;
+}
+
+.footer-label {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.social-list li {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.social-list a {
+  color: var(--color-paper);
+  font-weight: 500;
+}
+
+/* 10. MEDIA QUERIES */
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 4rem 1.25rem;
+  }
+
+  .hero-inner {
+    padding: 1.75rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .about,
+  .portfolio,
+  .contact {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
